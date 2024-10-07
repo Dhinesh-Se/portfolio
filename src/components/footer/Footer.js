@@ -12,12 +12,6 @@ export default function Footer() {
         <p className={isDark ? "dark-mode footer-text" : "footer-text"}>
           {emoji("Made with ❤️ by VD")}
         </p>
-        <p className={isDark ? "dark-mode footer-text" : "footer-text"}>
-          Design inspired by{" "}
-          <a href="developerfolio.js.org/">
-            myportfolio
-          </a>
-        </p>
       </div>
     </Fade>
   );
