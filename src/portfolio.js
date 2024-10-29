@@ -26,7 +26,7 @@ const greeting = {
     "A passionate Full Stack Software Developer 🚀 with a strong foundation in building dynamic and scalable web applications. I have hands-on experience with JavaScript,Angular,React.js, Node.js, React Native, and other cool libraries and frameworks. I'm also well-versed in Java and Spring Boot for backend development, and proficient with databases like SQL, PL/SQL, and MongoDB"
   ),
   resumeLink:
-    "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
+    "https://1drv.ms/b/s!Aim_MAuavGFdcs--RRXGyW8XopA", // Set to empty to hide the button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
