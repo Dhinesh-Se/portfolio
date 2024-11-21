@@ -119,7 +119,7 @@ const educationInfo = {
       schoolName: "Coimbatore Institute of Engineering and Technology",
       logo: require("./assets/images/cal-logo.png"),
       subHeader: "Bachelor of Technology in Information Technology",
-      duration: "March 2018 - April 2022",
+      duration: "Aug 2018 - Jul 2022",
       desc: "Graduated with a grade of 8. Participated in research projects and published 3 papers.",
       descBullets: [
         "Activities and societies: Student, Athlete, and Rotaract Club member"
@@ -159,7 +159,7 @@ const workExperiences = {
       role: "Junior Associate",
       company: "KGiSL",
       companylogo: require("./assets/images/kgisl_logo.png"),
-      date: "June 2018 – Present",
+      date: "Dec 2022 – Present",
       desc: "I started my career as a Full Stack Developer at KGiSL, working in the insurance domain for Dubai Insurance (WPP). I have been involved in several projects using Angular, Java, and Spring Boot. Currently, I am working on the payment side of the application, integrating payment services with external gateways.",
       descBullets: [
         "Worked on the insurance domain for Dubai Insurance (WPP)",
