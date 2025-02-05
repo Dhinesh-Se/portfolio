@@ -95,7 +95,7 @@ if (USE_GITHUB_DATA === "true") {
 }
 
 if (MEDIUM_USERNAME !== undefined) {
-  console.log(`Fetching Medium blogs data for ${MEDIUM_USERNAME}`);
+  console.log("Fetching Medium blogs data");
   const options = {
     hostname: "api.rss2json.com",
     path: `/v1/api.json?rss_url=https://medium.com/feed/@${MEDIUM_USERNAME}`,
