@@ -16,7 +16,7 @@ export default function Blogs() {
       ? html
           .split("p>")
           .filter(el => !el.includes(">"))
-          .map(el => el.replace("</", ".").replace("<", ""))
+          .map(el => el.replace(/<\//g, ".").replace(/</g, ""))
           .join(" ")
       : NaN;
   }
