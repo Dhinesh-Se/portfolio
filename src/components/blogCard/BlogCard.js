@@ -26,6 +26,18 @@ export default function BlogCard({blog, isDark}) {
           <p className={isDark ? "small-dark small" : "small"}>
             {blog.description}
           </p>
+          <div className="blog-meta">
+            {blog.readingTime && (
+              <span className={isDark ? "dark-mode blog-meta-item" : "blog-meta-item"}>
+                <i className="fas fa-clock"></i> {blog.readingTime} min read
+              </span>
+            )}
+            {blog.date && (
+              <span className={isDark ? "dark-mode blog-meta-item" : "blog-meta-item"}>
+                <i className="fas fa-calendar"></i> {new Date(blog.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+              </span>
+            )}
+          </div>
           <div className="go-corner">
             <div className="go-arrow">→</div>
           </div>

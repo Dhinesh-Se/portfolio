@@ -147,3 +147,28 @@
 .blog-card-shadow {
   box-shadow: 1px 0px 20px $darkBoxShadow2;
 }
+
+.blog-meta {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 0 20px;
+  flex-wrap: wrap;
+  font-size: 0.875rem;
+}
+
+.blog-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: $cardSubtitle;
+  
+  i {
+    font-size: 0.75rem;
+    opacity: 0.7;
+  }
+}
+
+.dark-mode .blog-meta-item {
+  color: rgba(255, 255, 255, 0.7);
+}

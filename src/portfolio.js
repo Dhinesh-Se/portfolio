@@ -23,7 +23,7 @@ const greeting = {
   username: "Dhinesh",
   title: "Hi all, I'm Dhinesh",
   subTitle: emoji(
-    "A passionate Full Stack Software Developer 🚀 with a strong foundation in building dynamic and scalable web applications. I have hands-on experience with JavaScript,Angular,React.js, Node.js, React Native, and other cool libraries and frameworks. I'm also well-versed in Java and Spring Boot for backend development, and proficient with databases like SQL, PL/SQL, and MongoDB"
+    "Full Stack Software Engineer with 3 years of experience delivering scalable, high-performance applications in the insurance and financial domains 🚀. Skilled in Java (Spring Boot), Angular, REST APIs, and SQL. Proven expertise in optimizing workflows, integrating secure payment gateways, and ensuring compliance with regulatory authorities."
   ),
   resumeLink:
     "https://1drv.ms/b/s!Aim_MAuavGFdcs--RRXGyW8XopA", // Set to empty to hide the button
@@ -38,6 +38,7 @@ const socialMediaLinks = {
   gmail: "elavarasivel1976@gmail.com",
   medium: "https://medium.com/@dhinesh-se",
   stackoverflow: "https://stackoverflow.com/users/20884684/dauntless-vd",
+  instagram: "https://www.instagram.com/echoesof.vd/",
   // Instagram, Twitter and Kaggle are also supported in the links!
   // To customize icons and social links, tweak src/components/SocialMedia
   display: true // Set true to display this section, defaults to false
@@ -47,10 +48,16 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  subTitle: "FULL STACK ENGINEER SPECIALIZING IN INSURANCE & FINANCIAL DOMAINS",
   skills: [
     emoji(
-      "⚡ Develop highly interactive Front end / User Interfaces for web applications, as well as robust back-end services using technologies like Java, Spring Boot, and Node.js, ensuring a complete and seamless user experience"
+      "⚡ Develop and maintain scalable web applications using Angular, Java, and Spring Boot to support insurance operations"
+    ),
+    emoji(
+      "⚡ Integrate secure payment gateways (CyberSource, N-Genius) and ensure compliance with regulatory authorities like MOHRE and Central Bank"
+    ),
+    emoji(
+      "⚡ Optimize system performance, reducing processing time by ~30% and improving scalability across premium collection, policy administration, and claims processing"
     )    
   ],
 
@@ -75,6 +82,10 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fab fa-js"
     },
     {
+      skillName: "TypeScript",
+      fontAwesomeClassname: "fab fa-js"
+    },
+    {
       skillName: "Angular",
       fontAwesomeClassname: "fab fa-angular"
     },
@@ -91,6 +102,10 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fab fa-java"
     },
     {
+      skillName: "Spring Boot",
+      fontAwesomeClassname: "fab fa-java"
+    },
+    {
       skillName: "npm",
       fontAwesomeClassname: "fab fa-npm"
     },
@@ -99,11 +114,11 @@ https://fontawesome.com/icons?d=gallery */
       fontAwesomeClassname: "fas fa-database"
     },
     {
-      skillName: "python",
-      fontAwesomeClassname: "fab fa-python"
+      skillName: "docker",
+      fontAwesomeClassname: "fab fa-docker"
     },
     {
-      skillName: "docker",
+      skillName: "kubernetes",
       fontAwesomeClassname: "fab fa-docker"
     }
   ],
@@ -118,10 +133,12 @@ const educationInfo = {
     {
       schoolName: "Coimbatore Institute of Engineering and Technology",
       logo: require("./assets/images/cal-logo.png"),
-      subHeader: "Bachelor of Technology in Information Technology",
+      subHeader: "B.Tech (Information Technology)",
       duration: "Aug 2018 - Jul 2022",
-      desc: "Graduated with a grade of 8. Participated in research projects and published 3 papers.",
+      desc: "Bachelor of Technology in Information Technology. Graduated with strong foundation in software engineering, web development, and database management.",
       descBullets: [
+        "Specialized in Full Stack Development, Database Systems, and Software Engineering",
+        "Participated in research projects and published papers",
         "Activities and societies: Student, Athlete, and Rotaract Club member"
       ]
     }
@@ -135,16 +152,20 @@ const techStack = {
   viewSkillBars: true, //Set it to true to show Proficiency Section
   experience: [
     {
-      Stack: "Frontend/Design", //Insert stack or technology you have experience in
-      progressPercentage: "80%" //Insert relative proficiency in percentage
+      Stack: "Frontend Development", //Insert stack or technology you have experience in
+      progressPercentage: "85%" //Insert relative proficiency in percentage
     },
     {
-      Stack: "Backend",
+      Stack: "Backend Development",
       progressPercentage: "90%"
     },
     {
-      Stack: "Programming",
-      progressPercentage: "70%"
+      Stack: "Database & ORM",
+      progressPercentage: "85%"
+    },
+    {
+      Stack: "DevOps & Cloud",
+      progressPercentage: "75%"
     }
   ],
   displayCodersrank: true // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
@@ -156,16 +177,19 @@ const workExperiences = {
   display: true, // Set it to true to show workExperiences Section
   experience: [
     {
-      role: "Junior Associate",
+      role: "Junior Associate - Full Stack Developer",
       company: "KGiSL",
       companylogo: require("./assets/images/kgisl_logo.png"),
       date: "Dec 2022 – Present",
-      desc: "I started my career as a Full Stack Developer at KGiSL, working in the insurance domain for Dubai Insurance (WPP). I have been involved in several projects using Angular, Java, and Spring Boot. Currently, I am working on the payment side of the application, integrating payment services with external gateways.",
+      desc: "Full Stack Software Engineer with 3 years of experience delivering scalable, high-performance applications in the insurance and financial domains. Working on multiple projects for Dubai Insurance including Worker Protection Program (WPP), Workers Health Insurance (WHI), and Free Zone platforms.",
       descBullets: [
-        "Worked on the insurance domain for Dubai Insurance (WPP)",
-        "Developed applications using Angular, Java, and Spring Boot",
-        "Integrated payment services with external gateways using CyberSource and N-Genius",
-        "Collaborated on multiple projects related to payment processing and insurance claims"
+        "Developed and maintained web applications using Angular, Java, and Spring Boot to support insurance operations",
+        "Designed and developed core modules: claims management, policy issuance, sponsor & worker management, and employer compliance tracking",
+        "Integrated secure payment gateways (CyberSource, N-Genius) and real-time data synchronization with MOHRE and Central Bank APIs",
+        "Optimized system performance, reducing processing time by ~30% and improving scalability",
+        "Delivered Workers Health Insurance (WHI) platform in just 30 days, meeting strict government deadlines",
+        "Implemented Group Claims Processing & Approval workflow, reducing claim settlement time by 30%",
+        "Built dashboard-driven admin panels with finance, audit, and reporting capabilities"
       ]
     }
   ]
@@ -184,19 +208,40 @@ const openSource = {
 // Some big projects you have worked on
 
 const bigProjects = {
-  title: "Big Projects",
-  subtitle: "COMPANIES THAT I HELPED TO CREATE THEIR TECH",
+  title: "Major Projects",
+  subtitle: "ENTERPRISE SOLUTIONS DELIVERED FOR INSURANCE DOMAIN",
   projects: [
     {
       image: require("./assets/images/dubai_insurance_co_logo.png"),
-      projectName: "Dubai Insurance (WPP)",
-      projectDesc: "Worked on developing and integrating features for the insurance domain, including payment gateway integration using CyberSource and N-Genius, leveraging Angular, Java, and Spring Boot.",
+      projectName: "Worker Protection Program (WPP)",
+      projectDesc: "Full Stack Developer for Dubai Insurance. Designed and developed core modules including claims management, policy issuance, sponsor & worker management, and employer compliance tracking. Integrated payment gateways (CyberSource, N-Genius) and MOHRE APIs for real-time regulatory compliance.",
       footerLink: [
         {
           name: "Visit Company Website",
           url: "https://dubins-wpp.ae/en/wpp"
         }
-        // you can add extra buttons here.
+      ]
+    },
+    {
+      image: require("./assets/images/dubai_insurance_co_logo.png"),
+      projectName: "Workers Health Insurance (WHI)",
+      projectDesc: "Delivered the entire WHI platform within 30 days, collaborating closely with cross-functional teams to meet strict regulatory deadlines. Developed policy issuance, renewals, compliance modules, and integrated MOHRE APIs for validation and real-time synchronization.",
+      footerLink: [
+        {
+          name: "Visit Company Website",
+          url: "https://dubins-wpp.ae/en/wpp"
+        }
+      ]
+    },
+    {
+      image: require("./assets/images/dubai_insurance_co_logo.png"),
+      projectName: "Free Zone Platform",
+      projectDesc: "Delivered the Freezone platform under tight deadlines. Developed policy issuance and claims modules compliant with Freezone regulations. Integrated with Central Bank's APIs for secure, real-time registration and validation. Implemented tax-invoice generation and publication.",
+      footerLink: [
+        {
+          name: "Visit Company Website",
+          url: "https://dubins-wpp.ae/en/wpp"
+        }
       ]
     }
   ],
@@ -209,9 +254,36 @@ const bigProjects = {
 
 const achievementSection = {
   title: emoji("Achievements And Certifications 🏆 "),
-  subtitle: "Achievements, Certifications, Award Letters, and Some Cool Stuff that I have done!",
+  subtitle: "Professional Achievements, Certifications, and Key Accomplishments!",
 
   achievementsCards: [
+    {
+      title: "Delivered WHI Platform in 30 Days",
+      subtitle: "Successfully delivered the entire Workers Health Insurance platform within 30 days, meeting strict government deadlines and ensuring regulatory go-live success.",
+      image: require("./assets/images/dubai_insurance_co_logo.png"),
+      imageAlt: "KGiSL Achievement",
+      footerLink: [],
+      issuedDate: "Dec 2022 - Present",
+      credentialID: "Key Achievement"
+    },
+    {
+      title: "30% Reduction in Claim Settlement Time",
+      subtitle: "Designed and implemented Group Claims Processing & Approval workflow, reducing claim settlement time by 30% compared to legacy system.",
+      image: require("./assets/images/dubai_insurance_co_logo.png"),
+      imageAlt: "Performance Achievement",
+      footerLink: [],
+      issuedDate: "Dec 2022 - Present",
+      credentialID: "Performance Optimization"
+    },
+    {
+      title: "30% Processing Time Reduction",
+      subtitle: "Optimized system performance across premium collection and policy administration, reducing processing time by ~30% and improving scalability.",
+      image: require("./assets/images/dubai_insurance_co_logo.png"),
+      imageAlt: "Optimization Achievement",
+      footerLink: [],
+      issuedDate: "Dec 2022 - Present",
+      credentialID: "System Optimization"
+    },
     {
       title: "Oracle Cloud Infrastructure 2023 Certified Foundations Associate",
       subtitle: "Oracle Cloud Infrastructure 2023 Certified Foundations Associate",
@@ -273,27 +345,15 @@ const achievementSection = {
 };
 
 
-// Blogs Section
+// GitHub Projects Section (formerly Blogs)
+// This section now displays your GitHub repositories instead of blogs
 
 const blogSection = {
-  title: "Blogs",
+  title: "GitHub Projects",
   subtitle:
-    "With Love for Developing cool stuff, I love to write and teach others what I have learnt.",
-  displayMediumBlogs: "true", // Set true to display fetched medium blogs instead of hardcoded ones
-  blogs: [
-    {
-      url: "https://blog.usejournal.com/create-a-google-assistant-action-and-win-a-google-t-shirt-and-cloud-credits-4a8d86d76eae",
-      title: "Win a Google Assistant Tshirt and $200 in Google Cloud Credits",
-      description:
-        "Do you want to win $200 and Google Assistant Tshirt by creating a Google Assistant Action in less then 30 min?"
-    },
-    {
-      url: "https://medium.com/@saadpasta/why-react-is-the-best-5a97563f423e",
-      title: "Why REACT is The Best?",
-      description:
-        "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
-    }
-  ],
+    "Explore my repositories, contributions, and open source projects. Search and filter by language, stars, or name.",
+  displayMediumBlogs: "false", // Not used for GitHub projects
+  blogs: [], // Not used - projects are fetched from GitHub
   display: true // Set false to hide this section, defaults to true
 };
 
@@ -353,7 +413,23 @@ const twitterDetails = {
   display: false // Set true to display this section, defaults to false
 };
 
-const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
+// Instagram Section
+const instagramDetails = {
+  userName: "echoesof.vd", // Add your Instagram username without @
+  display: true, // Set true to display this section, defaults to false
+  postsCount: 6, // Number of posts to display
+  // Add your Instagram post URLs here
+  // To get post URLs: Go to instagram.com/echoesof.vd, click on a post, copy the URL
+  // Format: "https://www.instagram.com/p/POST_ID/"
+  postUrls: [
+    "https://www.instagram.com/p/DPHWogMErUV/",
+    "https://www.instagram.com/p/DJZnsekMi8a/",
+    "https://www.instagram.com/p/DNOK1bjSehi/",
+    // Add more post URLs here as needed
+  ]
+};
+
+const isHireable = true; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
 
 export {
   illustration,
@@ -372,6 +448,7 @@ export {
   podcastSection,
   contactInfo,
   twitterDetails,
+  instagramDetails,
   isHireable,
   resumeSection
 };

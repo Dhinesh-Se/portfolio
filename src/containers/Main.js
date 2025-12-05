@@ -14,6 +14,8 @@ import Podcast from "./podcast/Podcast";
 import Education from "./education/Education";
 import ScrollToTopButton from "./topbutton/Top";
 import Twitter from "./twitter-embed/twitter";
+import Instagram from "./instagram/Instagram";
+import GithubTimeline from "./githubTimeline/GithubTimeline";
 import Profile from "./profile/Profile";
 import SplashScreen from "./splashScreen/SplashScreen";
 import {splashScreen} from "../portfolio";
@@ -62,6 +64,8 @@ const Main = () => {
             <Blogs />
             <Talks />
             <Twitter />
+            <Instagram />
+            <GithubTimeline />
             <Podcast />
             <Profile />
             <Footer />

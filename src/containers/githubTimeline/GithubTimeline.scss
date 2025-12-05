@@ -1,0 +1,271 @@
+@import "../../_globalColor.scss";
+
+.github-timeline-main-div {
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  width: auto;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.1), 0 1px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15), 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.dark-mode .github-timeline-main-div {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+}
+
+.github-timeline-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.github-timeline-heading {
+  font-size: 3rem;
+  font-weight: 800;
+  color: $titleColor;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: linear-gradient(135deg, $buttonColor, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  i {
+    font-size: 2.5rem;
+    color: $buttonColor;
+    filter: drop-shadow(0 2px 4px rgba(99, 102, 241, 0.3));
+  }
+}
+
+.dark-mode .github-timeline-heading {
+  color: $textColorDark;
+  background: linear-gradient(135deg, #818cf8, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  i {
+    color: #818cf8;
+  }
+}
+
+.github-timeline-subtitle {
+  font-size: 1.1rem;
+  color: $subTitle;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.dark-mode .github-timeline-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.github-timeline-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, $buttonColor 0%, #8b5cf6 100%);
+  border-radius: 2px;
+  opacity: 0.3;
+}
+
+.dark-mode .timeline-line {
+  background: linear-gradient(180deg, #818cf8 0%, #a78bfa 100%);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 80px;
+  margin-bottom: 2rem;
+  animation: slideInLeft 0.6s ease-out both;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, $buttonColor, #8b5cf6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+  border: 4px solid $lightBackground1;
+  transition: all 0.3s ease;
+
+  i {
+    color: white;
+    font-size: 1.2rem;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+  }
+}
+
+.dark-mode .timeline-dot {
+  background: linear-gradient(135deg, #818cf8, #a78bfa);
+  border-color: $darkBackground;
+}
+
+.timeline-content {
+  background: $lightBackground1;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-left: 4px solid $buttonColor;
+
+  &:hover {
+    transform: translateX(5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.dark-mode .timeline-content {
+  background: rgba(15, 23, 42, 0.8);
+  border-left-color: #818cf8;
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.timeline-date {
+  font-weight: 600;
+  color: $buttonColor;
+  font-size: 0.9rem;
+}
+
+.timeline-time {
+  color: $subTitle;
+  font-size: 0.85rem;
+}
+
+.dark-mode .timeline-time {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.timeline-message {
+  color: $textColor;
+  margin: 0.5rem 0;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.dark-mode .timeline-message {
+  color: $textColorDark;
+}
+
+.timeline-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: $buttonColor;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 0.75rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: #8b5cf6;
+    transform: translateX(3px);
+  }
+
+  i {
+    font-size: 0.8rem;
+  }
+}
+
+.github-timeline-footer {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.github-timeline-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, $buttonColor, #8b5cf6);
+  color: white;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(99, 102, 241, 0.3);
+
+  i {
+    font-size: 1.3rem;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.4);
+    background: linear-gradient(135deg, #8b5cf6, $buttonColor);
+  }
+}
+
+@media (max-width: 768px) {
+  .github-timeline-main-div {
+    padding: 2rem 1.5rem;
+  }
+
+  .github-timeline-heading {
+    font-size: 2rem;
+  }
+
+  .timeline-item {
+    padding-left: 70px;
+  }
+
+  .timeline-dot {
+    width: 50px;
+    height: 50px;
+
+    i {
+      font-size: 1rem;
+    }
+  }
+}
+
