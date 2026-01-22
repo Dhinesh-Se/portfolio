@@ -22,10 +22,14 @@ export default function Blogs() {
       // First try to get from profile.json (pinned repos)
       fetch("/profile.json")
         .then(result => {
-          if (result.ok) {
-            return result.json();
+          if (!result.ok) {
+            throw new Error(`HTTP error! status: ${result.status}`);
           }
-          throw new Error("Profile data not available");
+          const contentType = result.headers.get("content-type");
+          if (!contentType || !contentType.includes("application/json")) {
+            throw new Error("Response is not JSON");
+          }
+          return result.json();
         })
         .then(response => {
           if (response && response.data && response.data.user && response.data.user.pinnedItems) {

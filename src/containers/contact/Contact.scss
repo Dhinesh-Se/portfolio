@@ -2,6 +2,8 @@
 
 .contact-div-main {
   display: flex;
+  gap: 3rem;
+  align-items: center;
 }
 
 .dark-mode a {
@@ -10,6 +12,15 @@
 
 .contact-div-main > * {
   flex: 1;
+}
+
+.contact-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form-button {
+  margin-top: 2rem;
 }
 
 .contact-title {
@@ -24,13 +35,31 @@
   font-weight: 400;
   color: $subTitle;
   text-decoration: none;
+  display: inline-block;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: $buttonGradient;
+    transition: width 0.4s ease;
+    border-radius: 2px;
+  }
 }
 
 .contact-detail:hover,
 .contact-detail-email:hover {
-  color: $textColor;
-  text-shadow: 2px 1px 2px $contactDetailHoverTS;
-  transition: all 0.3s;
+  color: $buttonColor;
+  transform: translateX(10px);
+  
+  &::after {
+    width: 100%;
+  }
 }
 
 .contact-subtitle {
@@ -53,11 +82,20 @@
 }
 
 /* Media Query */
-@media (max-width: 1380px), (max-width: 768px) {
+@media (max-width: 1380px) {
+  .contact-div-main {
+    gap: 2rem;
+  }
+  
   .contact-title {
     font-size: 56px;
-    font-weight: 400;
-    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-div-main {
+    flex-direction: column;
+    gap: 2rem;
   }
 
   .contact-title {
@@ -83,5 +121,14 @@
 
   .contact-image-div {
     display: none;
+  }
+  
+  .contact-header {
+    width: 100%;
+  }
+  
+  .contact-form-button {
+    display: flex;
+    justify-content: center;
   }
 }

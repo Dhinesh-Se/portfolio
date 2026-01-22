@@ -1,0 +1,51 @@
+[build]
+  publish = "build"
+  functions = "netlify/functions"
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# Redirect rules for SPA
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# API proxy - makes functions accessible at /api/*
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+# Headers for security
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Cache static assets
+[[headers]]
+  for = "/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Netlify Forms configuration
+[forms]
+  # Forms are automatically detected when you add netlify attribute
+
+# Function configuration
+[functions]
+  # Set timeout for functions (max 26 seconds on free tier)
+  timeout = 10
+
+# Environment variables (set these in Netlify dashboard)
+# MAILCHIMP_API_KEY = "your-key"
+# MAILCHIMP_LIST_ID = "your-list-id"
+# MAILCHIMP_SERVER = "us1"
+# AIRTABLE_API_KEY = "your-key"
+# AIRTABLE_BASE_ID = "your-base-id"
+

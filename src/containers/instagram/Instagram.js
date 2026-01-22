@@ -11,18 +11,33 @@ export default function Instagram() {
   useEffect(() => {
     if (instagramDetails.display && instagramDetails.userName) {
       const loadInstagramScript = () => {
-        if (!window.instgrm) {
-          const script = document.createElement("script");
-          script.src = "https://www.instagram.com/embed.js";
-          script.async = true;
-          script.onload = () => {
-            if (window.instgrm && window.instgrm.Embeds) {
+        try {
+          if (!window.instgrm) {
+            const script = document.createElement("script");
+            script.src = "https://www.instagram.com/embed.js";
+            script.async = true;
+            script.onload = () => {
+              try {
+                if (window.instgrm && window.instgrm.Embeds) {
+                  window.instgrm.Embeds.process();
+                }
+              } catch (error) {
+                console.warn("Instagram embed processing error:", error);
+              }
+            };
+            script.onerror = () => {
+              console.warn("Failed to load Instagram embed script");
+            };
+            document.body.appendChild(script);
+          } else if (window.instgrm && window.instgrm.Embeds) {
+            try {
               window.instgrm.Embeds.process();
+            } catch (error) {
+              console.warn("Instagram embed processing error:", error);
             }
-          };
-          document.body.appendChild(script);
-        } else if (window.instgrm && window.instgrm.Embeds) {
-          window.instgrm.Embeds.process();
+          }
+        } catch (error) {
+          console.warn("Instagram script loading error:", error);
         }
       };
       setTimeout(loadInstagramScript, 100);

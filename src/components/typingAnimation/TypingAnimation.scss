@@ -1,0 +1,24 @@
+@import "../../_globalColor";
+
+.typing-animation {
+  display: inline-block;
+  color: $buttonColor;
+  font-weight: 600;
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 1s infinite;
+  color: $buttonColor;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+

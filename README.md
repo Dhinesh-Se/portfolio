@@ -1,5 +1,5 @@
 # Software Developer Folio ⚡️
-<!-- [![GitHub](https://img.shields.io/github/license/saadpasta/developer-portfolio?color=blue)](https://github.com/saadpasta/developerFolio/blob/master/LICENSE) [![GitHub stars](https://img.shields.io/github/stars/saadpasta/developerFolio)](https://github.com/saadpasta/developerFolio/stargazers)  [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors) -->
+<!-- [![GitHub](https://img.shields.io/github/license/Dhinesh-Se/portfolio?color=blue)](https://github.com/Dhinesh-Se/portfolio/blob/master/LICENSE) [![GitHub stars](https://img.shields.io/github/stars/Dhinesh-Se/portfolio)](https://github.com/Dhinesh-Se/portfolio/stargazers)  [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors) -->
 
 ## A clean, beautiful and responsive portfolio template for Developers
 
@@ -62,20 +62,20 @@ git@2.17.1 or higher
 ### Docker Commands
 
 ```
-1) BUILD IMAGE : docker build -t developerfolio:latest .
-2) RUN IMAGE: docker run -t -p 3000:3000 developerfolio:latest
+1) BUILD IMAGE : docker build -t portfolio:latest .
+2) RUN IMAGE: docker run -t -p 3000:3000 portfolio:latest
 ```
 
 ## How To Use
 
-From your command line, clone and run developerFolio:
+From your command line, clone and run the portfolio:
 
 ```bash
 # Clone this repository
-git clone https://github.com/saadpasta/developerFolio.git
+git clone https://github.com/Dhinesh-Se/portfolio.git
 
 # Go into the repository
-cd developerFolio
+cd portfolio
 
 # Setup default environment variables
 
@@ -100,7 +100,7 @@ Generate a classic GitHub personal access token following these [instructions](h
 Note: Configuring environment variables before deploying your portfolio is highly recommended as some components depend on API data.
 
 ```bash
-- DeveloperFolio
+- portfolio
   - node_modules
   - public
   - src
@@ -155,18 +155,19 @@ Set `displayMediumBlogs` to true or false in portofolio.js to display fetched Me
 
 const greeting = {
   /* Your Summary And Greeting Section */
-  title: "Hi all I'm Saad",
-  subTitle: emoji("A passionate Full Stack Software Developer 🚀"),
-  resumeLink: "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing"
+  title: "Hi all, I'm Dhinesh",
+  subTitle: emoji("Full Stack Software Engineer with 3 years of experience 🚀"),
+  resumeLink: "https://1drv.ms/b/s!Aim_MAuavGFdcs--RRXGyW8XopA"
 };
 
 const socialMediaLinks = {
   /* Your Social Media Link */
-  github: "https://github.com/saadpasta",
-  linkedin: "https://www.linkedin.com/in/saadpasta/",
-  gmail: "saadpasta70@gmail.com",
-  gitlab: "https://gitlab.com/saadpasta",
-  facebook: "https://www.facebook.com/saad.pasta7"
+  github: "https://github.com/Dhinesh-Se",
+  linkedin: "https://www.linkedin.com/in/dhineshse/",
+  gmail: "elavarasivel1976@gmail.com",
+  medium: "https://medium.com/@dhinesh-se",
+  stackoverflow: "https://stackoverflow.com/users/20884684/dauntless-vd",
+  instagram: "https://www.instagram.com/echoesof.vd/"
 };
 
 
@@ -231,9 +232,9 @@ The Profile and the Repository information from GitHub is only created at the ti
 
 This section guides you to deploy your portfolio on GitHub pages.
 
-- Navigate to `package.json` and enter your domain name instead of `https://developerfolio.js.org/` in `homepage` variable. For example, if you want your site to be `https://<your-username>.github.io/developerFolio`, add the same to the homepage section of `package.json`.
+- Navigate to `package.json` and enter your domain name instead of `https://Dhinesh-Se.github.io` in `homepage` variable. For example, if you want your site to be `https://<your-username>.github.io/portfolio`, add the same to the homepage section of `package.json`.
 
-- In short you can also add `/devloperFolio` to `package.json` as both are exactly same. Upon doing so, you tell `create-react-app` to add the path assets accordingly.
+- In short you can also add `/portfolio` to `package.json` as both are exactly same. Upon doing so, you tell `create-react-app` to add the path assets accordingly.
 
 - Optionally, configure the domain. You can configure a custom domain with GitHub Pages by adding a `CNAME` file to the `public/` folder.
 
@@ -243,7 +244,7 @@ This section guides you to deploy your portfolio on GitHub pages.
 
 You could also host directly with Netlify by linking your own repository.
 
-[![Deploy To Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/saadpasta/developerFolio)
+[![Deploy To Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Dhinesh-Se/portfolio)
 
 For more information, read [hosting on Netlify](https://create-react-app.dev/docs/deployment/#netlify).
 

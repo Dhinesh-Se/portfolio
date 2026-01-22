@@ -1,0 +1,58 @@
+@import "../../_globalColor";
+
+.visitor-counter {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  background: $cardGradient;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  font-size: 14px;
+  z-index: 100;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dark-mode.visitor-counter {
+  background: $glassBackgroundDark;
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+.counter-label {
+  color: $subTitle;
+  font-weight: 500;
+}
+
+.dark-mode .counter-label {
+  color: rgba(241, 245, 249, 0.7);
+}
+
+.counter-value {
+  color: $buttonColor;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.dark-mode .counter-value {
+  color: #a78bfa;
+}
+
+/* Media Query */
+@media (max-width: 768px) {
+  .visitor-counter {
+    bottom: 80px;
+    right: 20px;
+    font-size: 12px;
+    padding: 10px 16px;
+  }
+  
+  .counter-value {
+    font-size: 14px;
+  }
+}
+

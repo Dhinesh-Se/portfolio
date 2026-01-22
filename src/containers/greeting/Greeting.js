@@ -6,6 +6,7 @@ import landingPerson from "../../assets/lottie/landingPerson";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
+import TypingAnimation from "../../components/typingAnimation/TypingAnimation";
 import {illustration, greeting} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
 
@@ -24,7 +25,22 @@ export default function Greeting() {
                 className={isDark ? "dark-mode greeting-text" : "greeting-text"}
               >
                 {" "}
-                {greeting.title}{" "}
+                {greeting.typingStrings ? (
+                  // If typingStrings is configured, use typing animation
+                  <>
+                    {greeting.titlePrefix || "Hi all, I'm"}{" "}
+                    <TypingAnimation 
+                      strings={greeting.typingStrings}
+                      typeSpeed={greeting.typingSpeed || 100}
+                      backSpeed={greeting.typingBackSpeed || 50}
+                      loop={greeting.typingLoop !== undefined ? greeting.typingLoop : true}
+                    />
+                    {" "}
+                  </>
+                ) : (
+                  // Otherwise, use the static title from configuration
+                  greeting.title
+                )}
                 <span className="wave-emoji">{emoji("👋")}</span>
               </h1>
               <p
@@ -38,25 +54,39 @@ export default function Greeting() {
               </p>
               <SocialMedia />
               <div className="button-greeting-div">
-  <Button text="Contact me" href="#contact" />
-  {greeting.resumeLink ? (
-    <a
-      href={greeting.resumeLink}
-      download="dhinesh_se_resume.pdf"
-      className="download-link-button"
-    >
-      <Button text="Download my resume" />
-    </a>
-  ) : (
-    <a
-      href={require("./dhinesh_se_resume.pdf")}
-      download="dhinesh_se_resume.pdf"
-      className="download-link-button"
-    >
-      <Button text="Download my resume" />
-    </a>
-  )}
-</div>
+                <Button text="Contact me" href="#contact" />
+                {greeting.resumeLink ? (
+                  <Button 
+                    text="Download my resume" 
+                    href={greeting.resumeLink}
+                    newTab={true}
+                    className="download-link-button"
+                  />
+                ) : (
+                  <a
+                    href={require("./dhinesh_se_resume.pdf")}
+                    download="dhinesh_se_resume.pdf"
+                    className="download-link-button"
+                    onClick={async () => {
+                      // Track download
+                      try {
+                        await fetch("/.netlify/functions/track-download", {
+                          method: "POST",
+                          headers: { "Content-Type": "application/json" },
+                          body: JSON.stringify({ source: "greeting-section" })
+                        });
+                      } catch (error) {
+                        console.error("Failed to track download:", error);
+                      }
+                    }}
+                    style={{ textDecoration: "none", display: "inline-block" }}
+                  >
+                    <div className="main-button" style={{ cursor: "pointer" }}>
+                      Download my resume
+                    </div>
+                  </a>
+                )}
+              </div>
 
             </div>
           </div>

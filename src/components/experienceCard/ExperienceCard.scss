@@ -2,22 +2,38 @@
 
 .experience-card {
   position: relative;
-  background-color: $lightBackground2;
+  background: $cardGradient;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
-  border-radius: 10px;
-  border: 1px solid $lightBorder1;
+  border-radius: 20px;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .experience-card-dark {
   position: relative;
-  background-color: $darkBackground;
+  background: $glassBackgroundDark;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
-  border-radius: 10px;
-  border: 1px solid $lightBorder1;
+  border-radius: 20px;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .experience-card:hover {
-  box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
+  box-shadow: 0px 20px 40px -10px rgba(99, 102, 241, 0.4);
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(99, 102, 241, 0.4);
+}
+
+.experience-card-dark:hover {
+  box-shadow: 0px 20px 40px -10px rgba(139, 92, 246, 0.5);
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(139, 92, 246, 0.5);
 }
 
 .experience-banner {
@@ -25,7 +41,7 @@
   background-repeat: no-repeat;
   background-size: 150%;
   background: $experienceCardBannerLG;
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 20px 20px 0px 0px;
   -webkit-filter: blur(0px);
   -moz-filter: blur(0px);
   -o-filter: blur(0px);
@@ -35,6 +51,28 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: shimmer 3s infinite;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
 }
 
 .experience-blurred_div {
@@ -49,7 +87,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 20px 20px 0px 0px;
 }
 
 .experience-div-company {

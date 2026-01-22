@@ -6,6 +6,8 @@ For greater control over colors visit each components .scss file. */
 $buttonColor: #6366f1;
 $buttonHover: #4f46e5;
 $topButtonHover: #1e1b4b;
+$buttonGradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+$buttonGradientHover: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #db2777 100%);
 
 // text colors light theme
 $titleColor: #0f172a;
@@ -58,6 +60,9 @@ $experienceCardBannerLG: linear-gradient(
   rgba(99, 102, 241, 0.8),
   rgba(139, 92, 246, 0.8)
 );
+$cardGradient: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+$glassBackground: rgba(255, 255, 255, 0.1);
+$glassBackgroundDark: rgba(0, 0, 0, 0.2);
 
 // borders
 $progressBarBackground: #e2e8f0;

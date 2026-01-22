@@ -2,16 +2,24 @@
 
 .repo-card-div {
   color: $githubRepoCardColor;
-  background-color: $lightBackground2;
+  background: $cardGradient;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
   padding: 2rem;
   cursor: pointer;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  border-radius: 20px;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  -webkit-transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -o-transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
 }
 .repo-card-div:hover {
-  box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
+  box-shadow: 0px 20px 40px -10px rgba(99, 102, 241, 0.4);
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(99, 102, 241, 0.4);
 }
 
 .repo-stats {
@@ -78,8 +86,11 @@
 }
 
 .dark-card-mode {
-  background-color: $darkBackground;
+  background: $glassBackgroundDark;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   color: $textColorDark;
+  border-color: rgba(139, 92, 246, 0.3);
 }
 .dark-card-mode p {
   color: $textColorDark;
@@ -90,6 +101,8 @@
 }
 
 .dark-card-mode:hover {
-  background-color: $buttonColor !important;
-  box-shadow: 0px 0px 16px $darkBoxShadow;
+  background: rgba(99, 102, 241, 0.2) !important;
+  box-shadow: 0px 20px 40px -10px rgba(139, 92, 246, 0.5);
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(139, 92, 246, 0.5);
 }

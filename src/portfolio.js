@@ -21,12 +21,29 @@ const illustration = {
 
 const greeting = {
   username: "Dhinesh",
-  title: "Hi all, I'm Dhinesh",
+  title: "Hi all, I'm Dhinesh", // Static title - used when typingStrings is not provided
+  // Typing Animation Configuration (optional):
+  // If typingStrings is provided, the title will use typing animation instead of static text
+  // titlePrefix: "Hi all, I'm", // Optional prefix before typing animation (default: "Hi all, I'm")
+  typingStrings: [
+    "Dhinesh",
+    "Full Stack Developer",
+    "Software Engineer", 
+    "Problem Solver"
+  ], // Array of strings to cycle through with typing animation
+  // typingSpeed: 100, // Optional: typing speed in ms (default: 100)
+  // typingBackSpeed: 50, // Optional: backspace speed in ms (default: 50)
+  // typingLoop: true, // Optional: whether to loop through strings (default: true)
   subTitle: emoji(
     "Full Stack Software Engineer with 3 years of experience delivering scalable, high-performance applications in the insurance and financial domains 🚀. Skilled in Java (Spring Boot), Angular, REST APIs, and SQL. Proven expertise in optimizing workflows, integrating secure payment gateways, and ensuring compliance with regulatory authorities."
   ),
-  resumeLink:
-    "https://1drv.ms/b/s!Aim_MAuavGFdcs--RRXGyW8XopA", // Set to empty to hide the button
+  // Resume Link Options:
+  // Option 1: Empty string "" - Uses local file from src/containers/greeting/dhinesh_se_resume.pdf
+  // Option 2: GitHub Raw URL - "https://raw.githubusercontent.com/Dhinesh-Se/portfolio/main/src/containers/greeting/dhinesh_se_resume.pdf"
+  // Option 3: Google Drive Direct Link - Get shareable link and replace /view?usp=sharing with /uc?export=download
+  // Option 4: Dropbox Direct Link - Get shareable link and change ?dl=0 to ?dl=1
+  // Option 5: Any direct download URL (AWS S3, Firebase, CDN, etc.)
+  resumeLink: "", // Leave empty for local file, or add any direct download URL
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 

@@ -9,6 +9,8 @@
 
 .dark-menu {
   background-color: $darkBackground !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   color: $textColorDark;
 }
 
@@ -22,6 +24,8 @@
 
 .header {
   background-color: $lightBackground1;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   max-width: 100%;
   padding: 15px 20px;
   margin: 0px auto;

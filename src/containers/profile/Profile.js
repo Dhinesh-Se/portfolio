@@ -18,12 +18,21 @@ export default function Profile() {
       const getProfileData = () => {
         fetch("/profile.json")
           .then(result => {
-            if (result.ok) {
-              return result.json();
+            if (!result.ok) {
+              throw new Error(`HTTP error! status: ${result.status}`);
             }
+            const contentType = result.headers.get("content-type");
+            if (!contentType || !contentType.includes("application/json")) {
+              throw new Error("Response is not JSON");
+            }
+            return result.json();
           })
           .then(response => {
-            setProfileFunction(response.data.user);
+            if (response && response.data && response.data.user) {
+              setProfileFunction(response.data.user);
+            } else {
+              throw new Error("Invalid response structure");
+            }
           })
           .catch(function (error) {
             console.error(

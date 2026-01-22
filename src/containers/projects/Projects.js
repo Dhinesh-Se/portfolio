@@ -18,13 +18,21 @@ export default function Projects() {
     const getRepoData = () => {
       fetch("/profile.json")
         .then(result => {
-          if (result.ok) {
-            return result.json();
+          if (!result.ok) {
+            throw new Error(`HTTP error! status: ${result.status}`);
           }
-          throw result;
+          const contentType = result.headers.get("content-type");
+          if (!contentType || !contentType.includes("application/json")) {
+            throw new Error("Response is not JSON");
+          }
+          return result.json();
         })
         .then(response => {
-          setrepoFunction(response.data.user.pinnedItems.edges);
+          if (response && response.data && response.data.user && response.data.user.pinnedItems) {
+            setrepoFunction(response.data.user.pinnedItems.edges);
+          } else {
+            throw new Error("Invalid response structure");
+          }
         })
         .catch(function (error) {
           console.error(

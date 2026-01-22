@@ -1,0 +1,95 @@
+@import "../../_globalColor";
+
+.contact-form {
+  margin-top: 0;
+  max-width: 100%;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px 20px;
+  border: 2px solid $lightBorder1;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: inherit;
+  background: $lightBackground2;
+  color: $textColor;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+  
+  &:focus {
+    outline: none;
+    border-color: $buttonColor;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    background: $lightBackground1;
+  }
+  
+  &::placeholder {
+    color: $subTitle;
+  }
+}
+
+.dark-mode.contact-form input,
+.dark-mode.contact-form textarea {
+  background: $glassBackgroundDark;
+  border-color: rgba(139, 92, 246, 0.3);
+  color: $textColorDark;
+  
+  &:focus {
+    border-color: rgba(139, 92, 246, 0.6);
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+    background: rgba(15, 23, 42, 0.8);
+  }
+  
+  &::placeholder {
+    color: rgba(241, 245, 249, 0.5);
+  }
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-status {
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 14px;
+  text-align: center;
+  
+  &.success {
+    background: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+  }
+  
+  &.error {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+  }
+}
+
+.form-submit {
+  margin-top: 1rem;
+}
+
+/* Media Query */
+@media (max-width: 768px) {
+  .contact-form {
+    max-width: 100%;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+}
+

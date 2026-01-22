@@ -18,6 +18,12 @@ import Instagram from "./instagram/Instagram";
 import GithubTimeline from "./githubTimeline/GithubTimeline";
 import Profile from "./profile/Profile";
 import SplashScreen from "./splashScreen/SplashScreen";
+import ScrollProgress from "../components/scrollProgress/ScrollProgress";
+import ParticleBackground from "../components/particleBackground/ParticleBackground";
+import Chatbot from "../components/chatbot/Chatbot";
+import Statistics from "./statistics/Statistics";
+import Testimonials from "../components/testimonials/Testimonials";
+import VisitorCounter from "../components/visitorCounter/VisitorCounter";
 import {splashScreen} from "../portfolio";
 import {StyleProvider} from "../contexts/StyleContext";
 import {useLocalStorage} from "../hooks/useLocalStorage";
@@ -52,15 +58,19 @@ const Main = () => {
           <SplashScreen />
         ) : (
           <>
+            <ParticleBackground />
+            <ScrollProgress />
             <Header />
             <Greeting />
             <Skills />
             <StackProgress />
             <Education />
             <WorkExperience />
+            <Statistics />
             <Projects />
             <StartupProject />
             <Achievement />
+            <Testimonials />
             <Blogs />
             <Talks />
             <Twitter />
@@ -70,6 +80,8 @@ const Main = () => {
             <Profile />
             <Footer />
             <ScrollToTopButton />
+            <Chatbot />
+            <VisitorCounter />
           </>
         )}
       </StyleProvider>
