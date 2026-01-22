@@ -38,9 +38,12 @@
   # Forms are automatically detected when you add netlify attribute
 
 # Function configuration
-[functions]
-  # Set timeout for functions (max 26 seconds on free tier)
-  timeout = 10
+# Note: Function timeouts are configured in Netlify dashboard:
+# Site settings > Functions > Function timeout (default: 10s on free tier, max 26s)
+# External node modules can be configured here if needed:
+# [functions]
+#   [functions.timeout]
+#     external_node_modules = ["module-name"]
 
 # Environment variables (set these in Netlify dashboard)
 # MAILCHIMP_API_KEY = "your-key"
