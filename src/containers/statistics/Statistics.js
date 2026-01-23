@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Fade } from "react-reveal";
+import { Fade } from "../../components/reveal";
 import "./Statistics.scss";
 import StyleContext from "../../contexts/StyleContext";
 

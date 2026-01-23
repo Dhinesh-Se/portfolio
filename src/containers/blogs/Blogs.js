@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useContext, useMemo, Suspense, lazy} from "react";
 import "./Blog.scss";
 import {blogSection, socialMediaLinks} from "../../portfolio";
-import {Fade} from "react-reveal";
+import {Fade} from "../../components/reveal";
 import StyleContext from "../../contexts/StyleContext";
 import Loading from "../loading/Loading";
 

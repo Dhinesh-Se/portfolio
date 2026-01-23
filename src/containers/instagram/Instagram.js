@@ -2,7 +2,7 @@ import React, {useContext, useEffect} from "react";
 import "./Instagram.scss";
 import {instagramDetails} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
-import {Fade} from "react-reveal";
+import {Fade} from "../../components/reveal";
 
 export default function Instagram() {
   const {isDark} = useContext(StyleContext);

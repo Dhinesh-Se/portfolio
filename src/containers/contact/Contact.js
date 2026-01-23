@@ -4,7 +4,7 @@ import SocialMedia from "../../components/socialMedia/SocialMedia";
 import ContactModal from "../../components/contactModal/ContactModal";
 import Button from "../../components/button/Button";
 import {illustration, contactInfo} from "../../portfolio";
-import {Fade} from "react-reveal";
+import {Fade} from "../../components/reveal";
 import email from "../../assets/lottie/email";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import StyleContext from "../../contexts/StyleContext";

@@ -2,7 +2,7 @@ import React, {useState, useEffect, useContext} from "react";
 import "./GithubTimeline.scss";
 import {socialMediaLinks} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
-import {Fade} from "react-reveal";
+import {Fade} from "../../components/reveal";
 import Loading from "../loading/Loading";
 
 export default function GithubTimeline() {
